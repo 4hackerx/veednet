@@ -7,6 +7,15 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+@font-face {
+  font-family: 'Audiowide';
+  src: url('/fonts/audiowide_regular.ttf') format('truetype');
+  /* Add more src lines for different font formats if needed */
+}
+
+.font-audiowide {
+  font-family: 'Audiowide',
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
