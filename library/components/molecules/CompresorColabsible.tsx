@@ -8,7 +8,7 @@ const CollapsibleDemo = () => {
   const [open, setOpen] = React.useState(true);
   return (
     <div className="flex justify-center">
-      <Collapsible.Root className="w-[72%]" open={open}>
+      <Collapsible.Root className="w-[72%]" open={open} onOpenChange={setOpen}>
         <div
           className="mb-5"
           style={{
@@ -35,28 +35,28 @@ const CollapsibleDemo = () => {
           </Collapsible.Trigger>
         </div>
 
-        {/* <div className="bg-[#FFFFFF] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
-        <div className="px-4">
-          <div className="flex justify-between mb-4 ">
-            <h1 className="text-[#000000] text-[16px] font-bold">Node 1</h1>
-            <div className="flex items-center gap-2">
-              <Image
-                src="/png/icon4.png"
-                alt={"icon"}
-                width={"10"}
-                height={"12"}
-                className="text-[#000000] w-4 h-4"
-              />
-              <h1>
-                80 <span>MB</span>
-              </h1>
+        <div className="bg-[#FFFFFF] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
+          <div className="px-4">
+            <div className="flex justify-between mb-4 ">
+              <h1 className="text-[#000000] text-[16px] font-bold">Node 1</h1>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/png/icon4.png"
+                  alt={"icon"}
+                  width={"10"}
+                  height={"12"}
+                  className="text-[#000000] w-4 h-4"
+                />
+                <h1>
+                  80 <span>MB</span>
+                </h1>
+              </div>
+            </div>
+            <div className="w-full  h-[8px] bg-gray-200 rounded-md overflow-hidden">
+              <div className="h-full bg-[#138FA8] transition-width w-[400px]"></div>
             </div>
           </div>
-          <div className="w-full  h-[8px] bg-gray-200 rounded-md overflow-hidden">
-            <div className="h-full bg-[#138FA8] transition-width w-[400px]"></div>
-          </div>
         </div>
-      </div> */}
 
         <Collapsible.Content>
           {["", ""].map(() => (
