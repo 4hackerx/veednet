@@ -1,8 +1,13 @@
-export default function Home() {
+"use client";
+import { ContainerScroll } from "@/library/components/molecules/scroll-animation";
+import React from "react";
+
+function HeroScrollDemo() {
   return (
-    <main>
-      <p>Hello There!</p>
-      <p>Welcome to VeedNet</p>
-    </main>
+    <div className="flex flex-col overflow-hidden">
+      <ContainerScroll users={[]} titleComponent={undefined} />
+    </div>
   );
 }
+
+export default HeroScrollDemo;
