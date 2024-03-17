@@ -2,22 +2,11 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="">
-      <div className="flex items-center justify-between p-5 px-4 bg-[#F7F7F8] z-[99999]">
-        <span className="text-[24px] cursor-pointer font-audiowide">
-          VidNet
-        </span>
-        <div className="flex items-center gap-[7px] justify-center bg-black text-[white] px-4 rounded-[15px] h-[50px]">
-          <Image
-            src="/png/icon1.png"
-            alt={"star"}
-            width={"15"}
-            height={"40"}
-            className="text-[black]"
-          />
-          <button className="font-audiowide font-[16px]">Connect Wallet</button>
-        </div>
-      </div>
+    <div className="flex items-center justify-between px-6 h-[80px] z-[99999]">
+      <Image src={"logo.svg"} alt={"logo"} width={"150"} height={"31"} />
+      <button className=" font-outfit font-[16px] bg-black text-[white] px-6 rounded-[32px] py-3.5">
+        Connect Wallet
+      </button>
     </div>
   );
 };
