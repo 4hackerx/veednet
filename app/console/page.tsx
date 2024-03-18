@@ -9,7 +9,7 @@ const page = () => {
             Start your node and earn veed rewards!
           </p>
           <p className="font-medium text-sm leading-[17px] text-[#484E62]">
-            To secure the network, you'll need to stake some coins. Click here
+            To secure the network, you&apos;ll need to stake some coins. Click here
             to access a faucet.
           </p>
         </div>
