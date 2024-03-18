@@ -1,13 +1,16 @@
-"use client";
-import { ContainerScroll } from "@/library/components/molecules/scroll-animation";
-import React from "react";
+import Footer from '@/library/components/organisms/Footer'
+import HeroPage from '@/library/components/organisms/HeroPage'
+import StickyScrollPage from '@/library/components/organisms/StickyScrollPage'
+import React from 'react'
 
-function HeroScrollDemo() {
+const page = () => {
   return (
-    <div className="flex flex-col overflow-hidden">
-      <ContainerScroll users={[]} titleComponent={undefined} />
+    <div>
+      <HeroPage />
+      <StickyScrollPage />
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default HeroScrollDemo;
+export default page
