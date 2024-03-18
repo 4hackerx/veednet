@@ -1,7 +1,7 @@
 const HeroPage = () => {
   return (
-    <div className="bg-gradient-to-b from-cyan-600 to-gray-950 h-[calc(100vh-80px)] text-white flex items-center px-[120px] ">
-      <div className=" mt-[-50px] flex gap-7 items-center justify-between w-full">
+    <div className="bg-gradient-to-b from-cyan-600 to-gray-950 h-[calc(100vh-80px)] text-white flex justify-center w-full">
+      <div className="flex gap-7 items-center justify-between w-full max-w-screen-xl px-8">
         {/* text */}
         <div className=" flex flex-col gap-8 w-[506px]">
           {/* text */}

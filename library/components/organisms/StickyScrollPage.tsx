@@ -20,8 +20,8 @@ const content = [
       "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))] flex items-center justify-center text-white">
-      A Picture can be here
-    </div>
+        A Picture can be here
+      </div>
     ),
   },
   {
@@ -47,18 +47,20 @@ const content = [
 ];
 function StickyScrollPage() {
   return (
-    <div className=" flex flex-col gap-[100px] bg-[#000011]">
-      <div className=" flex flex-col gap-6 mx-[120px] w-[506px] text-white">
-        <p className=" font-atyp text-[46px] leading-[60px]">
-          A run down on how Veednet works
-        </p>
-        <p className=" text-sm">
-          Transform your videos into GIFs with our fast, easy, and free GIF
-          maker. Convert to GIFs in just a few taps.
-        </p>
+    <>
+      <div className="flex justify-center w-full bg-[#000011] -mb-40">
+        <div className="flex flex-col gap-4 w-full max-w-screen-xl text-white px-8">
+          <p className=" w-[15ch] font-atyp text-5xl leading-[60px]">
+            A run down on how VeedNet works
+          </p>
+          <p className="w-[50ch] text-sm">
+            Transform your videos into GIFs with our fast, easy, and free GIF
+            maker. Convert to GIFs in just a few taps.
+          </p>
+        </div>
       </div>
       <StickyScroll content={content} />
-    </div>
+    </>
   );
 }
 export default StickyScrollPage;
