@@ -1,10 +1,7 @@
 "use client";
 import Globe from "react-globe.gl";
-import { useRef } from "react";
 
 const HeroPage = () => {
-  const globeEl = useRef();
-
   const N = 250;
   const gData = [...Array(N).keys()].map(() => ({
     lat: (Math.random() - 0.5) * 180,
@@ -12,6 +9,28 @@ const HeroPage = () => {
     size: Math.random() / 3,
     color: ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
   }));
+
+  const GlobeComponent = () => {
+    if (typeof window !== "undefined") {
+      return (
+        <div>
+          <Globe
+            width={600}
+            height={586}
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+            backgroundColor="rgba(0,0,0,0)"
+            pointsData={gData}
+            arcsData={gData}
+            pointAltitude="size"
+            pointColor="color"
+            pointLabel="color"
+          />
+        </div>
+      );
+    } else {
+      return null; // or any fallback component
+    }
+  };
 
   return (
     <div className="bg-gradient-to-b from-cyan-600 to-gray-950 h-[calc(100vh-80px)] text-white flex justify-center w-full">
@@ -40,17 +59,7 @@ const HeroPage = () => {
           </div>
         </div>
         {/* hero picture */}
-        <Globe
-          width={600}
-          height={586}
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-          backgroundColor="rgba(0,0,0,0)"
-          pointsData={gData}
-          arcsData={gData}
-          pointAltitude="size"
-          pointColor="color"
-          pointLabel="color"
-        />
+        <GlobeComponent />
       </div>
     </div>
   );
