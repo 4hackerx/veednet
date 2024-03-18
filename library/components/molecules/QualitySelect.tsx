@@ -1,10 +1,10 @@
+import React, { ChangeEvent } from "react";
 import {
   CheckIcon,
   ChevronDownIcon,
   ChevronUpIcon,
 } from "@radix-ui/react-icons";
 import * as Select from "@radix-ui/react-select";
-import React, { ChangeEvent } from "react";
 
 import { cn } from "@/library/utils";
 
@@ -17,11 +17,11 @@ interface selectProps {
 }
 
 const QualitySelect = (prop: selectProps) => (
-  <div className=" flex flex-col gap-2 w-[18%] items-center font-semibold text-[#484E62]">
-    {prop.label && <p className=" text-sm font-medium">{prop.label}</p>}
+  <div className="flex flex-col gap-2 w-[18%] items-center font-semibold text-[#484E62]">
+    {prop.label && <p className="text-sm font-medium">{prop.label}</p>}
     <Select.Root>
       <Select.Trigger
-        className="inline-flex items-center justify-between border border-[#138FA8] rounded-[32px] w-[162px] p-6 px-[15px] leading-none h-[44px] bg-white shadow-[0_0_0_2px] shadow-[#DEE6E5] outline-none"
+        className="inline-flex text-[#484E62] items-center font-outfit justify-between border border-[#138FA8] rounded-[32px] w-[162px] p-6 px-[15px] leading-none h-[44px] bg-white shadow-[0_0_0_2px] shadow-[#DEE6E5] outline-none"
         aria-label="Project"
       >
         <Select.Value placeholder="Select Quality" />
@@ -35,7 +35,7 @@ const QualitySelect = (prop: selectProps) => (
           <Select.ScrollUpButton className="flex items-center justify-center bg-white cursor-default">
             <ChevronUpIcon />
           </Select.ScrollUpButton>
-          <Select.Viewport className="p-[5px]">
+          <Select.Viewport className="p-[5px] font-outfit">
             <Select.Group>
               <SelectItem value="high">High</SelectItem>
               <SelectItem value="low">Low</SelectItem>
@@ -51,6 +51,8 @@ const QualitySelect = (prop: selectProps) => (
   </div>
 );
 
+QualitySelect.displayName = "QualitySelect";
+
 const SelectItem = React.forwardRef<
   HTMLDivElement,
   {
@@ -60,7 +62,6 @@ const SelectItem = React.forwardRef<
     children: React.ReactNode;
   }
 >(({ children, className, ...props }, forwardedRef) => {
-  // Existing code
   return (
     <Select.Item
       className={cn(

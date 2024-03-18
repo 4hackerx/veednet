@@ -18,7 +18,7 @@ const CollapsibleDemo = () => {
           }}
         >
           <span
-            className="text-violet11 text-[16px] leading-[25px] mb-5"
+            className="text-violet11 font-outfit text-[16px] leading-[25px] mb-5"
             style={{ color: "#484E62" }}
           >
             Your video is being compressed by 2 nodes
@@ -41,7 +41,9 @@ const CollapsibleDemo = () => {
           <div className="bg-[#FFFFFF] md:w-[100%] w-[62vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
             <div className="px-4">
               <div className="flex justify-between mb-4 ">
-                <h1 className="text-[#000000] text-[16px] font-bold">Node 1</h1>
+                <h1 className="text-[#000000] text-[16px] font-outfit font-bold">
+                  Node 1
+                </h1>
                 <div className="flex items-center gap-2">
                   <Image
                     src="/png/icon4.png"
@@ -50,7 +52,7 @@ const CollapsibleDemo = () => {
                     height={"12"}
                     className="text-[#000000] w-4 h-4"
                   />
-                  <h1>
+                  <h1 className="font-outfit">
                     80 <span>MB</span>
                   </h1>
                 </div>
@@ -63,13 +65,13 @@ const CollapsibleDemo = () => {
         </div>
 
         <Collapsible.Content>
-          {["", ""].map(() => (
+        {["", ""].map((_, index) => (
             <div className="flex justify-center">
               <div className="bg-[#FFFFFF] md:w-[100%] w-[62vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
                 <div className="px-4">
                   <div className="flex justify-between mb-4 ">
-                    <h1 className="text-[#000000] text-[16px] font-bold">
-                      Node 1
+                    <h1 className="text-[#000000] font-outfit text-[16px] font-bold">
+                      Node 2
                     </h1>
                     <div className="flex items-center gap-2">
                       <Image
@@ -79,7 +81,7 @@ const CollapsibleDemo = () => {
                         height={"12"}
                         className="text-[#000000] w-4 h-4"
                       />
-                      <h1>
+                      <h1 className="font-outfit">
                         80 <span>MB</span>
                       </h1>
                     </div>

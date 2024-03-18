@@ -25,7 +25,7 @@ const VideoSelector = () => {
           <div className="flex flex-wrap gap-4 justify-between px-4">
             <div className="flex text-[#FFFFFF] items-center text-center gap-[7px] justify-center bg-[#138FA8] w-[180px] h-[44px] rounded-[32px]">
               <VideoIcon />
-              <button className="text-[16px] font-semibold">
+              <button className="text-[16px] font-semibold font-outfit">
                 Choose Video
               </button>
             </div>
@@ -42,7 +42,7 @@ const VideoSelector = () => {
             </div>
             <div className="flex items-center gap-[7px] justify-center bg-[#138FA8] w-[180px] h-[44px] text-[#FFFFFF] rounded-[32px]">
               <MagicWandIcon />
-              <button className="text-[#FFFFFF] text-[16px] font-semibold">
+              <button className="text-[#FFFFFF] font-outfit text-[16px] font-semibold">
                 Compress Video
               </button>
             </div>

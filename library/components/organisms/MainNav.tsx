@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { useMemo } from "react";
-import { cn } from "@/library/utils";
+// import { cn } from "@/library/utils";
+import Image from "next/image";
 
 const MainNav = () => {
   const segments = useSelectedLayoutSegments();
@@ -32,7 +33,7 @@ const MainNav = () => {
     <div className="flex sticky top-0 w-full justify-between items-center bg-white px-6 py-3 border-b">
       <div className="flex items-center gap-8">
         <Link className="rounded-full" href={"/"}>
-          <img
+          <Image
             width={50}
             height={50}
             src="/veednet.svg"
@@ -65,13 +66,13 @@ const MainNav = () => {
       </div>
       <div className="flex gap-4 h-fit">
         <div className="bg-[#4E81FF] rounded-full p-[5px]">
-          <img width={25} height={25} src="/discord.svg" alt="discord logo" />
+          <Image width={25} height={25} src="/discord.svg" alt="discord logo" />
         </div>
         <div className="bg-[#4E81FF] rounded-full p-[5px]">
-          <img width={25} height={25} src="/twitter.svg" alt="twitter logo" />
+          <Image width={25} height={25} src="/twitter.svg" alt="twitter logo" />
         </div>
         <div className="bg-[#4E81FF] rounded-full p-[5px]">
-          <img width={25} height={25} src="/github.svg" alt="github logo" />
+          <Image width={25} height={25} src="/github.svg" alt="github logo" />
         </div>
       </div>
     </div>
