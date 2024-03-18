@@ -61,15 +61,6 @@ const Input = (prop: inputProps) => {
       case "rich":
         return (
           <div className=" p-4 bg-[#4e80ff28] min-h-[120px] rounded-md">
-            {/* <EditorBlock
-              data={JSON.parse(JSON.stringify(prop.value))}
-              onChange={(val: OutputData) =>
-                prop.onChange({
-                  target: { value: JSON.stringify(val) },
-                } as any)
-              }
-              holder="editorjs-container"
-            /> */}
           </div>
         );
       case "tag":

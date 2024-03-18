@@ -15,6 +15,8 @@ const config: Config = {
       },
       fontFamily: {
         'audiowide': ['Audiowide'],
+        'custom': ['YourCustomFont', 'sans'],
+        'outfit': ['Outfit'],
       },
     },
   },

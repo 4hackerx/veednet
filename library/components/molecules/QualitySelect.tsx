@@ -17,11 +17,11 @@ interface selectProps {
 }
 
 const QualitySelect = (prop: selectProps) => (
-  <div className=" flex flex-col gap-2 ">
+  <div className=" flex flex-col gap-2 w-[18%] items-center font-semibold text-[#484E62]">
     {prop.label && <p className=" text-sm font-medium">{prop.label}</p>}
     <Select.Root>
       <Select.Trigger
-        className="inline-flex items-center justify-between rounded w-full p-6 px-[15px] leading-none h-[35px] bg-white shadow-[0_0_0_2px] shadow-[#DEE6E5] outline-none"
+        className="inline-flex items-center justify-between border border-[#138FA8] rounded-[32px] w-[162px] p-6 px-[15px] leading-none h-[44px] bg-white shadow-[0_0_0_2px] shadow-[#DEE6E5] outline-none"
         aria-label="Project"
       >
         <Select.Value placeholder="Select Quality" />
@@ -32,7 +32,7 @@ const QualitySelect = (prop: selectProps) => (
 
       <Select.Portal>
         <Select.Content className="overflow-hidden bg-white rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
-          <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white cursor-default">
+          <Select.ScrollUpButton className="flex items-center justify-center bg-white cursor-default">
             <ChevronUpIcon />
           </Select.ScrollUpButton>
           <Select.Viewport className="p-[5px]">

@@ -2,22 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
-@font-face {
-  font-family: 'Audiowide';
-  src: url('/fonts/audiowide_regular.ttf') format('truetype');
-  /* Add more src lines for different font formats if needed */
-}
+} */
 
-.font-audiowide {
-  font-family: 'Audiowide',
-}
 
-@media (prefers-color-scheme: dark) {
+/* @layer utilities {
+  .custom-teal {
+      background-color: #138FA8;
+  }
+} */
+
+/* .font-audiowide {
+  font-family: 'Audiowide, YourCustomFont',
+} */
+/* .font-custom  */
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -35,4 +38,4 @@ canvas {
 
 .temp-gradient {
   background: linear-gradient(180deg, #4f82ff 0%, #e2c8ff 100%);
-}
+} */
