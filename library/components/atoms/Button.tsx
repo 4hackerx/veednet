@@ -1,5 +1,6 @@
 import { cn } from "@/library/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 interface buttonProps {
   text: string;
@@ -23,7 +24,7 @@ const Button = (button: buttonProps) => {
         >
           {button.text}
           {button.buttonImg && (
-            <img src={`/${button.buttonImg}`} className=" pl-4" />
+            <Image src={`/${button.buttonImg}`} className=" pl-4" alt={""} />
           )}
         </Link>
       ) : (
@@ -36,7 +37,7 @@ const Button = (button: buttonProps) => {
         >
           {button.text}
           {button.buttonImg && (
-            <img src={`/${button.buttonImg}`} className="pl-4" />
+            <Image src={`/${button.buttonImg}`} className="pl-4" alt={""} />
           )}
         </button>
       )}

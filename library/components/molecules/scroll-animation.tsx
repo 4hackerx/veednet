@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef } from "react";
+import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export const ContainerScroll = ({
@@ -94,7 +95,7 @@ export const Card = ({
   return (
     <motion.div
       style={{
-        rotateX: rotate, // rotate in X-axis
+        rotateX: rotate,
         scale,
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
@@ -115,7 +116,7 @@ export const Card = ({
             <div className="absolute top-2 right-2 rounded-full text-xs font-bold bg-white px-2 py-1">
               {user.badge}
             </div>
-            <img
+            <Image
               src={user.image}
               className="rounded-tr-md rounded-tl-md text-sm "
               alt="thumbnail"

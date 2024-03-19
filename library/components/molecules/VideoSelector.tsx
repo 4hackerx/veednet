@@ -1,5 +1,5 @@
 "use client";
-import { MagicWandIcon } from "@radix-ui/react-icons";
+import { MagicWandIcon,VideoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import QualitySelect from "./QualitySelect";
 import { ChangeEvent } from "react";
@@ -22,18 +22,14 @@ const VideoSelector = () => {
               3
             </div>
           </div>
-          <div className="flex flex-wrap justify-between px-4">
-            <div className="flex items-center gap-[7px] justify-center bg-[#138FA8] w-[158px] h-[44px] rounded-[10px]">
-              <Image
-                src="/png/icon2.png"
-                alt={"icon"}
-                width={"15"}
-                height={"15"}
-              />
-              <button className="text-[#FFFFFF] text-[16px] font-semibold">
+          <div className="flex flex-wrap gap-4 justify-between px-4">
+            <div className="flex text-[#FFFFFF] items-center text-center gap-[7px] justify-center bg-[#138FA8] w-[180px] h-[44px] rounded-[32px]">
+              <VideoIcon />
+              <button className="text-[16px] font-semibold font-outfit">
                 Choose Video
               </button>
             </div>
+            <div className="items-center flex justify-center">
             <QualitySelect
               input={false}
               value={""}
@@ -43,9 +39,10 @@ const VideoSelector = () => {
                 throw new Error("Function not implemented.");
               }}
             />
-            <div className="flex items-center gap-[7px] justify-center bg-[#138FA8] w-[158px] h-[44px] text-[#FFFFFF] rounded-[10px]">
+            </div>
+            <div className="flex items-center gap-[7px] justify-center bg-[#138FA8] w-[180px] h-[44px] text-[#FFFFFF] rounded-[32px]">
               <MagicWandIcon />
-              <button className="text-[#FFFFFF] text-[16px] font-semibold">
+              <button className="text-[#FFFFFF] font-outfit text-[16px] font-semibold">
                 Compress Video
               </button>
             </div>
