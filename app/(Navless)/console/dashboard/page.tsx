@@ -13,7 +13,7 @@ const Globe = dynamic(
   }
 );
 
-const page = () => {
+const Page = () => {
   const globeRef = useRef<GlobeMethods>();
   const [loaded, setLoaded] = useState(false);
 
@@ -64,4 +64,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
