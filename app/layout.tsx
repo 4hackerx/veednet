@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/opengraph-image.jpg",
         alt: "VeedNet landing page image",
       },
     ],
