@@ -1,7 +1,17 @@
 "use client";
-import Globe from "react-globe.gl";
+import dynamic from "next/dynamic";
+import { useLayoutEffect, useRef, useState } from "react";
+import { GlobeMethods } from "react-globe.gl";
+
+const Globe = dynamic(() => import("./WrappedGlobe"), {
+  ssr: false,
+  // loading: () => <div>Loading...</div>,
+});
 
 const HeroPage = () => {
+  const globeRef = useRef<GlobeMethods>();
+  const [loaded, setLoaded] = useState(false);
+
   const N = 250;
   const gData = [...Array(N).keys()].map(() => ({
     lat: (Math.random() - 0.5) * 180,
@@ -10,30 +20,25 @@ const HeroPage = () => {
     color: ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
   }));
 
-  const GlobeComponent = () => {
-    if (typeof window !== "undefined") {
-      return (
-        <div>
-          <Globe
-            width={600}
-            height={586}
-            globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-            backgroundColor="rgba(0,0,0,0)"
-            pointsData={gData}
-            arcsData={gData}
-            pointAltitude="size"
-            pointColor="color"
-            pointLabel="color"
-          />
-        </div>
-      );
-    } else {
-      return null; // or any fallback component
+  useLayoutEffect(() => {
+    if (globeRef.current && typeof window !== "undefined") {
+      globeRef.current.controls().autoRotate = true;
+      globeRef.current.controls().autoRotateSpeed = 2.0;
+      globeRef.current.controls().maxDistance = 310;
+      globeRef.current.controls().minDistance = 310;
+      globeRef.current.controls().enableZoom = false;
     }
+  }, [loaded]);
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.stopPropagation();
   };
 
   return (
-    <div className="bg-gradient-to-b from-cyan-600 to-gray-950 h-[calc(100vh-80px)] text-white flex justify-center w-full">
+    <div
+      className="bg-gradient-to-b from-cyan-600 to-[#000011] h-[calc(100vh-80px)] text-white flex justify-center w-full"
+      onWheel={handleWheel}
+    >
       <div className="flex gap-7 items-center justify-between w-full max-w-screen-xl px-8">
         {/* text */}
         <div className=" flex flex-col gap-8 w-[506px]">
@@ -58,8 +63,22 @@ const HeroPage = () => {
             </button>
           </div>
         </div>
-        {/* hero picture */}
-        <GlobeComponent />
+        {/* hero globe */}
+        <Globe
+          onGlobeReady={() => setLoaded(true)}
+          globeRef={globeRef}
+          width={600}
+          height={586}
+          globeImageUrl="/earth-night.jpg"
+          backgroundColor="rgba(0, 0, 0, 0)"
+          atmosphereColor="rgba(0, 234, 255, 0.665)"
+          atmosphereAltitude={0.3}
+          // pointsData={gData}
+          // arcsData={gData}
+          // pointAltitude="size"
+          // pointColor="color"
+          // pointLabel="color"
+        />
       </div>
     </div>
   );
