@@ -1,6 +1,5 @@
-import Navbar from "@/library/components/organisms/Navbar";
-import { cn } from "@/library/utils";
 import "@/library/styles/globals.css";
+import { cn } from "@/library/utils";
 // import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 
@@ -35,7 +34,7 @@ const outfit = Outfit({
   preload: true,
   weight: "600",
   variable: "--font-outfit",
-  display: 'swap'
+  display: "swap",
 });
 // const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas', display: 'swap' })
 const atyp = localFont({
@@ -58,7 +57,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, outfit.variable, atyp.variable)}>
-        <Navbar />
         {children}
       </body>
     </html>
