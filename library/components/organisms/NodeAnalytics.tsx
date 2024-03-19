@@ -21,12 +21,12 @@ const analytics = [
 const NodeAnalytics = () => {
   return (
     <div className="flex flex-col h-full p-4 min-w-fit gap-4 flex-1">
-      <p className=" font-outfit font-semibold w-full gap-4">Total Cycles</p>
+      <p className=" font-outfit font-semibold w-full gap-4">Node Analytics</p>
       <div className="grid grid-cols-2 gap-4">
         <Card className="min-w-80 w-fit flex-row justify-between">
           <div className="flex flex-col gap-6">
             <p className=" font-outfit font-semibold text-[#484E62]">
-              Tickets Sold
+              Total Cycles
             </p>
             <p className="text-4xl font-outfit font-bold text-[#02071E]">
               2.2k
