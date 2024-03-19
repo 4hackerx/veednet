@@ -5,6 +5,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "VeedNet",
   description: "Your video compression network",
+  openGraph: {
+    images: "/opengraph-image.png",
+    type: "website",
+    url: "https://example.com",
+    title: "VeedNet",
+    description: "Your video compression network",
+  },
 };
 
 import { Inter, Outfit } from "next/font/google";
