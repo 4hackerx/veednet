@@ -6,9 +6,14 @@ export const metadata: Metadata = {
   title: "VeedNet",
   description: "Your video compression network",
   openGraph: {
-    images: "/opengraph-image.png",
+    images: [
+      {
+        url: "opengraph-image.jpg",
+        alt: "VeedNet landing page",
+      },
+    ],
     type: "website",
-    url: "https://example.com",
+    url: "https://veednet.vercel.app/",
     title: "VeedNet",
     description: "Your video compression network",
   },
