@@ -60,12 +60,12 @@ const ActionCards = () => {
       id: 1,
     },
     {
-      component: ListTicketOnMarket,
+      component: ActionCard2,
       props: { flip },
       id: 3,
     },
     {
-      component: PurchaseTicket,
+      component: ActionCard,
       props: { flip },
       id: 2,
     },
@@ -143,24 +143,20 @@ const SelectAvatar = ({ handleSelection, flip }: SelectAvatarProps) => (
   </Card>
 );
 
-const PurchaseTicket = ({ flip }: GeneralCardProps) => (
+const ActionCard = ({ flip }: GeneralCardProps) => (
   <Card className="h-full min-w-fit w-[364px] justify-between rounded-3xl">
     <div className="flex items-center justify-center h-44 rounded-lg text-white bg-[linear-gradient(to_bottom_right,#06b6d4,#10b981)]">
-      <p className="text-2xl font-bold font-atyp">Your Cool Ticket</p>
+      <p className="text-2xl font-bold font-atyp">Action Card</p>
     </div>
-    <Button
-      className="font-medium"
-      text={"Purchase Ticket"}
-      handleClick={flip}
-    />
+    <Button className="font-medium" text={"Next Action"} handleClick={flip} />
   </Card>
 );
 
-const ListTicketOnMarket = ({ flip }: GeneralCardProps) => (
+const ActionCard2 = ({ flip }: GeneralCardProps) => (
   <Card className="h-full min-w-fit w-[364px] justify-between rounded-3xl">
     <div className="flex items-center justify-center h-44 rounded-lg text-white bg-[linear-gradient(to_bottom_right,#06b6d4,#10b981)]">
-      <p className="text-2xl font-bold font-atyp">Your Cool Ticket</p>
+      <p className="text-2xl font-bold font-atyp">Action Card 2</p>
     </div>
-    <Button className="font-medium" text={"List Ticket"} handleClick={flip} />
+    <Button className="font-medium" text={"Another Action"} handleClick={flip} />
   </Card>
 );

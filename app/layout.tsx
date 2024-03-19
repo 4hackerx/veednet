@@ -1,30 +1,11 @@
-import Navbar from "@/library/components/organisms/Navbar";
-import { cn } from "@/library/utils";
 import "@/library/styles/globals.css";
-// import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { cn } from "@/library/utils";
+import type { Metadata } from "next";
 
-// const inter = Inter({ subsets: ["latin"] });
-
-// export const metadata: Metadata = {
-//   title: "VeedNet",
-//   description: "Your video compression network",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html lang="en">
-//       <body>
-//         <Navbar />
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
+export const metadata: Metadata = {
+  title: "VeedNet",
+  description: "Your video compression network",
+};
 
 import { Inter, Outfit } from "next/font/google";
 import localFont from "next/font/local";
@@ -35,9 +16,8 @@ const outfit = Outfit({
   preload: true,
   weight: "600",
   variable: "--font-outfit",
-  display: 'swap'
+  display: "swap",
 });
-// const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas', display: 'swap' })
 const atyp = localFont({
   src: [
     {
@@ -58,7 +38,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, outfit.variable, atyp.variable)}>
-        <Navbar />
         {children}
       </body>
     </html>
