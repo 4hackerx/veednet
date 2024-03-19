@@ -1,8 +1,8 @@
-import type { Config } from "tailwindcss"; 
-import defaultTheme from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors";
+import type { Config } from "tailwindcss";
 
-const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -18,9 +18,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'audiowide': ['Audiowide'],
-        outfit: ['var(--font-outfit)'],
-        atyp: ['var(--font-atyp)'],
+        audiowide: ["Audiowide"],
+        outfit: ["var(--font-outfit)"],
+        atyp: ["var(--font-atyp)"],
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
@@ -47,7 +47,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

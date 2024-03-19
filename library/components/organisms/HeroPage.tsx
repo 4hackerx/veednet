@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useLayoutEffect, useRef, useState } from "react";
 import { GlobeMethods } from "react-globe.gl";
+import Button from "../atoms/Button";
 
 const Globe = dynamic(() => import("./WrappedGlobe"), {
   ssr: false,
@@ -54,13 +55,19 @@ const HeroPage = () => {
           </div>
           {/* buttons */}
           <div className=" flex gap-6">
-            <button className=" bg-[#138FA8] py-3 px-6 rounded-[32px] font-outfit font-medium">
-              Compress a Video
-            </button>
-            <button className=" border-white border flex gap-2 py-3 px-6 rounded-[32px] items-center font-outfit font-medium">
-              <p>Become a Node</p>
-              <img src="/sort.svg" alt="sort" />
-            </button>
+            <Button
+              link
+              href="/services/video-compressor"
+              className="bg-[#138FA8] active:bg-[#138FA8] py-3 px-6 rounded-[32px] font-outfit font-medium"
+              text={"Compress a Video"}
+            />
+            <Button
+              className="bg-transparent active:bg-transparent border-white border flex gap-2 py-3 px-6 rounded-[32px] items-center font-outfit font-medium"
+              link
+              href="/console"
+              text={"Become a Node"}
+              buttonImg="sort.svg"
+            />
           </div>
         </div>
         {/* hero globe */}
