@@ -10,6 +10,8 @@ export const metadata: Metadata = {
       {
         url: "opengraph-image.jpg",
         alt: "VeedNet landing page",
+        width: 1200,
+        height: 627,
       },
     ],
     type: "website",
