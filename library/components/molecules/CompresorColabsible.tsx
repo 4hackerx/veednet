@@ -26,7 +26,7 @@ const CollapsibleDemo = () => {
           <Collapsible.Trigger asChild>
             <div className="">
               <button
-                className="rounded-[50%] h-[25px] w-[25px] inline-flex items-center justify-center text-violet11 shadow-[0_2px_10px] shadow-blackA4 outline-none data-[state=closed]:bg-white data-[state=open]:bg-violet3 hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black"
+                className="rounded-[50%] h-[25px] w-[25px] inline-flex items-center justify-center text-violet11 bg-[black] text-[#FFFFFF] outline-none data-[state=closed]:bg-white data-[state=open]:bg-violet3 hover:bg-violet3"
                 onClick={() => {
                   setOpen;
                 }}
@@ -38,7 +38,7 @@ const CollapsibleDemo = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-[#FFFFFF] md:w-[100%] w-[62vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
+          <div className="bg-[#FFFFFF] md:w-[100%] w-[55vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
             <div className="px-4">
               <div className="flex justify-between mb-4 ">
                 <h1 className="text-[#000000] text-[16px] font-outfit font-bold">
@@ -67,7 +67,7 @@ const CollapsibleDemo = () => {
         <Collapsible.Content>
         {["", ""].map((_, index) => (
             <div className="flex justify-center">
-              <div className="bg-[#FFFFFF] md:w-[100%] w-[62vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
+              <div className="bg-[#FFFFFF] md:w-[100%] w-[55vh] rounded-[15px] shadow-2xl mb-5 lg:h-[15vh] md:h-[18vh] p-5">
                 <div className="px-4">
                   <div className="flex justify-between mb-4 ">
                     <h1 className="text-[#000000] font-outfit text-[16px] font-bold">
