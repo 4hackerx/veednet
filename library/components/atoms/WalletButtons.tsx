@@ -8,6 +8,7 @@ import {
     WalletName,
 } from "@aptos-labs/wallet-adapter-react";
 
+
 export const WalletButtons = () => {
     const { wallets, connected, disconnect, isLoading } = useWallet();
 
