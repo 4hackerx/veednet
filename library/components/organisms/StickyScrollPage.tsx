@@ -5,42 +5,52 @@ import { StickyScroll } from "./StickyScrollReveal";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Compression Flow",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Nodes download videos for compression based on their position in an index of compressors. They calculate split points for compression and upload compressed files to IPFS, storing the hash as Compression Proof (CP) in the module.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
+        Compression Flow
       </div>
     ),
   },
   {
-    title: "Real time changes",
+    title: "User Flow",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Users upload videos to IPFS and invoke the compression function. Video hash, user address, and service configuration are stored in a struct. Additional fields accommodate necessary data.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))] flex items-center justify-center text-white">
-        A Picture can be here
+        User Flow{" "}
       </div>
     ),
   },
   {
-    title: "Version control",
+    title: "Node Flow",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Nodes register by staking Veedcoins, ensuring network security. A minimum stake requirement promotes inclusivity. Randomness from the Aptos blockchain facilitates equitable task assignment using a Weighted Random Algorithm (WRA) based on stake weight.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+        Node Flow
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Low-Level Protocol Flow",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Users provide video IPFS hash locations. WRA selects nodes from the dormant pool. Selected nodes move to the active pool, compress videos, and upload to IPFS. Module updates the phantom config with CP. Nodes get rewards and return to the dormant pool for future tasks.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+        Low-Level Protocol Flow
+      </div>
+    ),
+  },
+  {
+    title: "Cycle Continuation",
+    description:
+      "The process ensures a continuous cycle of video compression tasks. Users, nodes, and the module collaborate seamlessly to handle compression requests efficiently, maintaining network integrity and performance.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Cycle Continuation
       </div>
     ),
   },
