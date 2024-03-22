@@ -1,0 +1,12 @@
+[package]
+name = "veednet"
+version = "0.0.1"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "randomnet" }
+
+[addresses]
+std = "0x1"
+aptos_std = "0x1"
+aptos_framework = "0x1"
+veednet = "518cbf23a171863d887f2fc9055455d5afcee8946202f35c7a683bded1e9cba5"
